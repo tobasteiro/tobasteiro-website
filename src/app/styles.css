@@ -1,0 +1,64 @@
+/*
+  CSS RESET
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  scrollbar-gutter: stable;
+}
+body {
+  background-color: var(--color-background);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* THEME VARS */
+html {
+  --content-width: 70rem;
+}
+main {
+  display: flex;
+  flex: 1;
+  /* max-width: var(--content-width); */
+  margin: 0 auto;
+  /* padding: 2rem 0; */
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
