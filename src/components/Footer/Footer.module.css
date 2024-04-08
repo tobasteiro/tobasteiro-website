@@ -9,6 +9,9 @@
 
 .footer_content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   flex-grow: 1;
   max-width: var(--content-width);
   height: fit-content;
@@ -28,7 +31,7 @@
   display: flex;
   flex-grow: 1;
   justify-content: flex-start;
-  gap: 4rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-function NoScreen() {
-  return <div>NO SCREEN CONTENT</div>;
+function OffScreen() {
+  return <div>OffScreen CONTENT</div>;
 }
 
-export default NoScreen;
+export default OffScreen;

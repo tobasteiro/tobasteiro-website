@@ -36,9 +36,6 @@
   text-decoration: none;
   color: var(--color-text);
 }
-.menus img {
-  border-radius: 50%;
-}
 
 .actions {
   display: flex;
