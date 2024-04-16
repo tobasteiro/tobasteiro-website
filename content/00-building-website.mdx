@@ -1,0 +1,137 @@
+---
+title: "Building this website as a Backend developer"
+abstract: This is my first post to showcase challenges faced when building my website as a backend developer.
+publishedOn: "2024-04-10T12:00:00-0400"
+tags: NEXTJS,REACT
+---
+
+I'm pretty confident that most developers with a strong background in backend struggle when dealing with styles and front-end code. Of course, my case wasn't the exception.
+
+Nowadays, we are lucky with all the tools, huge communities with great people who are willing to contribute their grain of sand. I was always lucky to work with some of those professionals who motivated me to build this blog/site.
+
+To create this website, I needed to re-learn many things about Javascript I used in previous jobs, that I learned wrong (during my early years as a developer, I used the first libraries of JS: JQuery, Ajax, XHTML, first versions of Angular etc.).
+
+Thanks to the awesome course The <MDXLink label="Joy of React" url="https://www.joyofreact.com/" /> from <MDXLink label="@joshwcomeau" url="https://www.joshwcomeau.com/" />, I could refresh and learn from scratch all concepts that I simply used in my programs without knowing what they mean.
+
+As a backend developer, I found a set of challenges that I wanted to share.
+
+## Step 0: Create NextJS App
+
+To create the boilerplate project, we can find plenty of documentation of NextJS online. However, here is my version.
+
+- <MDXLink label="Install NodeJS" url="https://nodejs.org/en/" />
+- <MDXLink
+    label="Install Yarn"
+    url="https://classic.yarnpkg.com/lang/en/docs/install/"
+  /> or <MDXLink
+    label="Install Npm"
+    url="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm"
+  />
+- Create a Next.js project (app routing):
+
+```bash
+npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/main/basics/learn-starter"
+```
+
+After creating the app, I could run the server:
+
+```bash
+yarn run dev
+```
+
+## Challenge 1: Header top, Footer bottom
+
+Every time I create a Web app, I face the same problem: keeping the header at the top and the footer at the bottom. It might sound easy, but it’s not very straightforward when you don’t have enough content, for example.
+
+So to achieve that, I added the following relevant CSS:
+
+```css
+body {
+  height: auto; //This will allow the header to keep showing when scrolling
+  min-height: 100vh; //This extends the height when the main content is not high enough
+  display: flex;
+  flex-direction: column; //To pile blocks one below the other
+}
+header {
+  position: sticky; //To stay visible on scroll
+  top: 0; //To stay at the top of the screen
+}
+main {
+  flex: 1 1; //flex-grow:1; flex-shrink:1;flex-basis:0%; This is to cover the full height thanks to the body flex direction as column
+}
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--color-primary-100);
+  color: #fff;
+}
+```
+
+In my case, I decided to delegate the margins to each section. If you want to have a max width, the CSS will be:
+
+```css
+main {
+  max-width: var(--content-width); // I used 70rem
+  margin: 0 auto; // To center the content
+}
+```
+
+## Challenge 2: Where to put the styles?
+
+There are plenty of libraries and frameworks to handle styles. I decided to go with CSS Modules mostly because that’s what I learned from the course. That way, each component would have a file named component-name.module.css, and we can import the styles in the component itself as a JavaScript object:
+
+```javascript
+import styles from "./component-name.module.css";
+```
+
+And use it as follows:
+
+```jsx
+className={styles.my_class_name}
+```
+
+## Challenge 3: Navigation
+
+This part, thanks to Next.js app routing, wasn’t very hard, since you can route the pages based on the file system structure.
+
+```jsx
+<Link href="/tech">Tech Stuff</Link>
+```
+
+This will look for the file in `src/app/tech/page.js`.
+
+To handle the active state, I used the `usePathname` hook from `next/navigation` adding the condition:
+
+```jsx
+className={currentPath.startsWith("/tech") ? styles.font_semibold : ""}
+```
+
+Note: To use hooks and other React features, the component needs to use the `use client` directive at the top of the component definition.
+
+## Challenge 4: Articles
+
+For this part, I used MDX, which I found very powerful and easy to integrate with React. It allows me to embed components into the articles like this one:
+
+```mdx
+[CMP]
+```
+
+You can find the code in my repository, but basically, it’s reading the MDX files from a folder in the source code, which have metadata associated like tags, title, description, etc.
+
+Again using Next.js app routing, I just needed to create the field `[postSlug]/page.js` to support the MDX file rendering, formatting the code snippets, adding component dependencies, etc.
+
+## Challenge 5: Content
+
+This part is less technical and purely my own point of view. I found and was advised that the best way to have something that works good for you is to define the content in an external tool. I’ve been tempted since the beginning to write the content while programming, but then realized that having something as simple as a Word document, Figma file, or any other tool makes things much easier to see the message I wanted to deliver.
+
+## Final Challenge: What is my deadline?
+
+Another less technical aspect. If I have to measure the time I’ve spent building this website (or at least the first version), I can easily say that 50% was going back and forth with the way things looked. I found what worked best for me was to just keep things simple, even if it doesn’t look great, but having a fully functional site. That way, I can iterate over the app, improving it on every iteration and adding what makes the site special for me.
+
+## Conclusion
+
+I don’t know if this article and the ones I expect to write will help others, but at least I want to show my personal experience and challenges I find throughout different projects I’m involved in.
+
+You can find the repository for my website <MDXLink label="here" url="https://github.com/tobasteiro/tobasteiro-website" />.

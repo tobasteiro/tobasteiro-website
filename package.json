@@ -10,8 +10,14 @@
     "new-component": "new-component"
   },
   "dependencies": {
+    "bright": "^0.8.5",
+    "clsx": "^2.1.0",
+    "date-fns": "^3.6.0",
+    "framer-motion": "^11.0.25",
+    "gray-matter": "^4.0.3",
     "new-component": "5.0.2",
     "next": "14.0.4",
+    "next-mdx-remote": "^4.4.1",
     "react": "^18",
     "react-dom": "^18",
     "react-feather": "2.0.10",

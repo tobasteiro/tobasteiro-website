@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: var(--content-width);
+  padding: 64px var(--viewport-padding);
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.tagList {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0px;
+}
+
+.postsList {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 32px;
+}

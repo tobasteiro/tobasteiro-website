@@ -1,0 +1,34 @@
+.wrapper {
+  width: 100%;
+  padding-bottom: 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.pageWrapper {
+  display: flex;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.page {
+  max-width: var(--content-readable-width);
+  position: relative;
+}
+
+.pageSidebar {
+  padding-left: 10rem;
+}
+
+.page p,
+.page ul {
+  font-size: 1.125rem;
+  padding-bottom: 1.5rem;
+}
+
+.page h2 {
+  color: var(--color-text);
+  font-size: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}

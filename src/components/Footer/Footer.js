@@ -3,6 +3,7 @@ import styles from "./Footer.module.css";
 
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
+import NavItems from "../NavItems";
 
 function Footer() {
   return (
@@ -10,15 +11,7 @@ function Footer() {
       <div className={styles.footer_content}>
         <div className={styles.footer_left}>
           <ul className={styles.menus}>
-            <li>
-              <Link href="/techstuff">Tech Stuff</Link>
-            </li>
-            <li>
-              <Link href="/offscreen">Off Screen</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
+            <NavItems />
           </ul>
           <div>
             <p>© 2024 Tobias Osmar Basteiro</p>

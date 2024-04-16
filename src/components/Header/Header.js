@@ -5,6 +5,7 @@ import { Play, Moon } from "react-feather";
 
 import styles from "./Header.module.css";
 import ResponsiveNav from "../ResponsiveNav";
+import NavItems from "../NavItems";
 
 function Header() {
   return (
@@ -12,15 +13,7 @@ function Header() {
       <div className={styles.topbar_wrapper}>
         <ResponsiveNav>
           <ol className={styles.menus}>
-            <li>
-              <Link href="/tech">Tech Stuff</Link>
-            </li>
-            <li>
-              <Link href="/offscreen">Off Screen</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
+            <NavItems />
           </ol>
         </ResponsiveNav>
         <div className={styles.actions}>
