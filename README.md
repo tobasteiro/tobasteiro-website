@@ -15,3 +15,9 @@ yarn install
 # Run development server:
 yarn run dev
 ```
+
+## Sections
+
+- Home Page: a brief description of my profile and use cases that I've worked on
+- Tech Stuff: a traditional blog type to write about the different technologies that I have worked with or am exploring
+- Off Screen: a page just for fun and showing something more about myself outside my professional life

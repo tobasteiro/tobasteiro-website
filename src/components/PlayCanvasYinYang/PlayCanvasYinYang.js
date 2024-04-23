@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import styles from "./PlayCanvasYinYang.module.css";
+
 function PlayCanvasYinYang() {
   const canvasRef = React.useRef(null);
   const outerRadius = 100;
@@ -83,17 +85,21 @@ function PlayCanvasYinYang() {
     return (degrees * Math.PI) / 180;
   }
   return (
-    <canvas
-      ref={canvasRef}
-      width={outerRadius * 2}
-      height={outerRadius * 2}
-      style={{
-        width: `${outerRadius * 2}px`,
-        height: `${outerRadius * 2}px`,
-        display: "block",
-        objectFit: "contain",
-      }}
-    ></canvas>
+    <div className={styles.container}>
+      <canvas
+        ref={canvasRef}
+        width={outerRadius * 2}
+        height={outerRadius * 2}
+        style={{
+          width: `${outerRadius * 2}px`,
+          height: `${outerRadius * 2}px`,
+          display: "block",
+          objectFit: "contain",
+        }}
+      ></canvas>
+
+      <p>A traditional Yin Yang drawn using the HTML5 Canvas API.</p>
+    </div>
   );
 }
 

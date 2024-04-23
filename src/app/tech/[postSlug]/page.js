@@ -10,6 +10,8 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 
 import styles from "./postSlug.module.css";
 import CodeSnippet from "@/components/CodeSnippet";
+import Tag from "@/components/Tag";
+import TechSidebar from "@/components/TechSidebar";
 
 const DivisionGroupsDemo = dynamic(() =>
   import("@/components/DivisionGroupsDemo")
@@ -19,6 +21,10 @@ const MDXLink = dynamic(() => import("@/components/MDXLink"));
 
 const CircularColorsDemo = dynamic(() =>
   import("@/components/CircularColorsDemo")
+);
+
+const PlayCanvasYinYang = dynamic(() =>
+  import("@/components/PlayCanvasYinYang")
 );
 
 export const getBlogPostData = React.cache(async (slug) => {
@@ -55,12 +61,13 @@ async function BlogPost({ params }) {
               pre: CodeSnippet,
               DivisionGroupsDemo,
               CircularColorsDemo,
+              PlayCanvasYinYang,
               MDXLink,
             }}
           />
         </div>
 
-        <div className={styles.pageSidebar}>sidebar</div>
+        <TechSidebar />
       </div>
     </article>
   );

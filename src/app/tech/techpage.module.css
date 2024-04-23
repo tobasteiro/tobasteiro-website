@@ -8,10 +8,12 @@
   margin-bottom: 4em;
 }
 
-.tagList {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0px;
+.wrapper a {
+  color: var(--color-primary-100);
+}
+
+.wrapper a:hover {
+  color: var(--color-secondary-100);
 }
 
 .postsList {

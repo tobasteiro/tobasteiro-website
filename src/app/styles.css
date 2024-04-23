@@ -27,6 +27,7 @@ body {
 ul,
 ol {
   list-style-type: none;
+  padding: 0;
 }
 
 img,
@@ -66,4 +67,10 @@ main {
   margin: 0 auto;
   /* padding: 2rem 0; */
   width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
 }

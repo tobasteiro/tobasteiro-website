@@ -4,9 +4,6 @@
   border: 1px solid var(--color-card-border);
   padding-bottom: 1.5rem;
 }
-.wrapper code {
-  text-wrap: wrap;
-}
 .wrapper code > div {
   font-size: 1.125rem;
 }

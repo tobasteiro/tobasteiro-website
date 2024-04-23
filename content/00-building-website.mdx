@@ -17,7 +17,7 @@ As a backend developer, I found a set of challenges that I wanted to share.
 
 ## Step 0: Create NextJS App
 
-To create the boilerplate project, we can find plenty of documentation of NextJS online. However, here is my version.
+To create the boilerplate project, we can find plenty of documentation of NextJS online. However, here is the relevant requirements.
 
 - <MDXLink label="Install NodeJS" url="https://nodejs.org/en/" />
 - <MDXLink
@@ -47,17 +47,17 @@ So to achieve that, I added the following relevant CSS:
 
 ```css
 body {
-  height: auto; //This will allow the header to keep showing when scrolling
-  min-height: 100vh; //This extends the height when the main content is not high enough
+  height: auto;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; //To pile blocks one below the other
+  flex-direction: column;
 }
 header {
-  position: sticky; //To stay visible on scroll
-  top: 0; //To stay at the top of the screen
+  position: sticky;
+  top: 0;
 }
 main {
-  flex: 1 1; //flex-grow:1; flex-shrink:1;flex-basis:0%; This is to cover the full height thanks to the body flex direction as column
+  flex: 1 1;
 }
 footer {
   position: relative;
@@ -68,6 +68,23 @@ footer {
   color: #fff;
 }
 ```
+
+Let's analyze some key attributes.
+
+body:
+
+- **height**: auto => This will allow the header to keep showing when scrolling
+- **min-height**: 100vh; => This extends the height when the main content is not high enough
+- **flex-direction**: column; => To pile blocks one below the other
+
+header:
+
+- **position**: sticky; => To stay visible on scroll
+- **top**: 0; => To stay at the top of the screen
+
+main:
+
+- **flex**: 1 1; => same as flex-grow:1; flex-shrink:1;flex-basis:0%; This is to cover the full height thanks to the body flex direction as column
 
 In my case, I decided to delegate the margins to each section. If you want to have a max width, the CSS will be:
 
@@ -105,7 +122,9 @@ This will look for the file in `src/app/tech/page.js`.
 To handle the active state, I used the `usePathname` hook from `next/navigation` adding the condition:
 
 ```jsx
-className={currentPath.startsWith("/tech") ? styles.font_semibold : ""}
+className={currentPath.startsWith("/tech")
+    ? styles.font_semibold
+    : ""}
 ```
 
 Note: To use hooks and other React features, the component needs to use the `use client` directive at the top of the component definition.
@@ -114,9 +133,7 @@ Note: To use hooks and other React features, the component needs to use the `use
 
 For this part, I used MDX, which I found very powerful and easy to integrate with React. It allows me to embed components into the articles like this one:
 
-```mdx
-[CMP]
-```
+<PlayCanvasYinYang />
 
 You can find the code in my repository, but basically, it’s reading the MDX files from a folder in the source code, which have metadata associated like tags, title, description, etc.
 

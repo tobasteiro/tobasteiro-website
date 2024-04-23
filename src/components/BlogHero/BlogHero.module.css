@@ -4,8 +4,15 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    var(--color-secondary-100),
+    var(--color-background)
+  );
   width: 100%;
   margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .content {

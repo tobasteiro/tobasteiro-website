@@ -9,19 +9,19 @@
   display: flex;
   max-width: var(--content-width);
   margin: 0 auto;
+  gap: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .page {
   max-width: var(--content-readable-width);
   position: relative;
+  width: 100%;
 }
 
-.pageSidebar {
-  padding-left: 10rem;
-}
-
-.page p,
-.page ul {
+.page > p,
+.page > ul {
   font-size: 1.125rem;
   padding-bottom: 1.5rem;
 }
@@ -31,4 +31,9 @@
   font-size: 2rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.page ul {
+  padding-inline-start: 40px;
+  list-style-type: disc;
 }

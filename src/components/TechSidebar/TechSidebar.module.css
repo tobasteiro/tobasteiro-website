@@ -1,0 +1,19 @@
+.pageSidebar {
+  margin-left: auto;
+}
+
+.pageSidebar h3 {
+  margin-bottom: 1rem;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .pageSidebar {
+    display: none;
+  }
+}
