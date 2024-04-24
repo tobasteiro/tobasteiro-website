@@ -59,6 +59,7 @@ html {
   --content-width: 70rem;
   --outer-content-width: 80rem;
   --content-readable-width: 65ch;
+  --viewport-padding: 16px;
 }
 main {
   display: flex;

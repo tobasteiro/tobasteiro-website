@@ -1,0 +1,12 @@
+.codeButton {
+  position: absolute;
+  right: 4rem;
+  margin-top: 1rem;
+  margin-right: -3rem;
+  display: none;
+}
+
+.container:hover .codeButton,
+.container.hover .codeButton {
+  display: block;
+}

@@ -17,11 +17,24 @@
   transition: all 0.3s linear;
 }
 
+.burger.b1 {
+  border-radius: 150px 150px 0 0;
+}
+
+.burger.b2 {
+  background-color: var(--color-secondary-100);
+}
+
+.burger.b3 {
+  border-radius: 0 0 150px 150px;
+}
+
 .hamburgerContainer {
   display: none;
 }
 
 .responsiveMenus > ol {
+  padding-left: 2rem;
   flex-direction: column;
   gap: 2rem;
 }

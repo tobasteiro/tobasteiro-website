@@ -12,6 +12,7 @@ function ResponsiveNav({ children }) {
   const isMobile = useMediaQuery({ maxWidth: "768px" });
 
   const toggleHamburger = () => {
+    console.log("test");
     setOpen(!open);
   };
 
@@ -27,9 +28,9 @@ function ResponsiveNav({ children }) {
       <div className={styles.hamburgerContainer}>
         <div onClick={toggleHamburger}>
           <div className={styles.hamburger}>
-            <div className={styles.burger} />
-            <div className={styles.burger} />
-            <div className={styles.burger} />
+            <div className={`${styles.burger} ${styles.b1}`} />
+            <div className={`${styles.burger} ${styles.b2}`} />
+            <div className={`${styles.burger} ${styles.b3}`} />
           </div>
         </div>
       </div>
