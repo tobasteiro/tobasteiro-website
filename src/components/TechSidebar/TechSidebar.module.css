@@ -1,5 +1,8 @@
 .pageSidebar {
   margin-left: auto;
+  position: sticky;
+  top: 9rem;
+  align-self: flex-start;
 }
 
 .pageSidebar h3 {

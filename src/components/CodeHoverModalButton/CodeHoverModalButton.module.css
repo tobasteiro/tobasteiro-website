@@ -4,6 +4,12 @@
   margin-top: 1rem;
   margin-right: -3rem;
   display: none;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  padding: 0.4rem;
+  cursor: pointer;
+  background-color: var(--color-secondary-100);
 }
 
 .container:hover .codeButton,

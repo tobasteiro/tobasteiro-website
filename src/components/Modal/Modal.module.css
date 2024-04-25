@@ -60,12 +60,12 @@
 }
 
 .content {
-  padding: 2rem;
+  padding: 4rem 2rem;
 }
 
 .actions {
-  display: flex;
-  justify-content: flex-end;
+  position: fixed;
+  right: 0;
   padding: 1rem;
 }
 

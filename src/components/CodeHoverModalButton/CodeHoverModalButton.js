@@ -9,6 +9,13 @@ function CodeHoverModalButton({ children, codeUrl }) {
   const [showModal, setShowModal] = React.useState(false);
   const [codeContent, setCodeContent] = React.useState(null);
 
+  React.useEffect(() => {
+    document.body.addEventListener("click", () => setShowModal(false));
+    return () => {
+      document.body.removeEventListener("click", () => setShowModal(false));
+    };
+  }, []);
+
   const openModal = () => {
     fetch(codeUrl)
       .then((response) => response.json())

@@ -15,7 +15,15 @@
   border-radius: 5px;
 }
 
+.default:hover {
+  background-color: var(--color-secondary-100);
+}
+
 .ghost {
   background-color: transparent;
   color: var(--color-secondary-100);
+}
+
+.ghost:hover {
+  color: var(--color-primary-100);
 }
