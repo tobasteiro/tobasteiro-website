@@ -28,14 +28,21 @@ function CodeHoverModalButton({ children, codeUrl }) {
 
   return (
     <div className={styles.container}>
-      <button className={styles.codeButton} onClick={openModal}>
+      {/* <button className={styles.codeButton} onClick={openModal}> */}
+      <a
+        className={styles.codeButton}
+        target="_blank"
+        href="https://github.com/tobasteiro/tobasteiro-website/blob/main/src/components/PlayCanvasYinYang/PlayCanvasYinYang.js/"
+        rel="noopener noreferrer"
+      >
         <Code size="1.5rem" />
-      </button>
+      </a>
+      {/* </button> */}
 
       {children}
-      <Modal showModal={showModal} setShowModal={setShowModal}>
+      {/* <Modal showModal={showModal} setShowModal={setShowModal}>
         {atob(codeContent)}
-      </Modal>
+      </Modal> */}
     </div>
   );
 }
