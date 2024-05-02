@@ -1,0 +1,45 @@
+.form_group {
+  margin-bottom: 20px;
+}
+
+.form_group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form_group textarea {
+  min-height: 6rem;
+}
+
+.form_control {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.success_message {
+  color: green;
+  font-weight: bold;
+}
+
+.submit_btn {
+  background-color: var(--color-primary-100);
+  color: var(--color-text-secondary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.submit_btn:hover {
+  background-color: var(--color-primary-200);
+}

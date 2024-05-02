@@ -1,51 +1,7 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-.image {
-  width: 300px;
-  height: auto;
-}
-
 .contact_form_container {
   max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   padding: 4rem;
   border-radius: 5px;
-}
-
-.form_group {
-  margin-bottom: 20px;
-}
-
-.form_group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form_control {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.submit_btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.success_message {
-  color: green;
-  font-weight: bold;
 }

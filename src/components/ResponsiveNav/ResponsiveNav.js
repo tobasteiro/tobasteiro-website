@@ -12,7 +12,6 @@ function ResponsiveNav({ children }) {
   const isMobile = useMediaQuery({ maxWidth: "768px" });
 
   const toggleHamburger = () => {
-    console.log("test");
     setOpen(!open);
   };
 
