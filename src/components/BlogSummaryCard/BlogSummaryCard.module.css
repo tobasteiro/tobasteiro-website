@@ -11,9 +11,10 @@
   text-decoration: none;
   transition: color 200ms;
   margin-bottom: 0.25rem;
+  color: var(--color-secondary-200);
 }
 .title:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary-100);
 }
 .tags {
   display: flex;
@@ -33,7 +34,7 @@
   margin-bottom: 1rem;
   font-weight: 500;
   font-size: 1.125rem;
-  color: var(--color-decorative-900);
+  color: var(--color-text-primary);
 }
 .wrapper p {
   font-size: 1.125rem;
@@ -43,10 +44,15 @@
 .arrow {
   display: inline-block;
   font-family: "Monaco", monospace;
-  color: var(--color-primary);
+  color: var(--color-text-primary);
   transition: transform 200ms;
   font-weight: 400;
 }
+
+.abstract {
+  color: var(--color-text-primary);
+}
+
 .continueReadingLink {
   font-weight: 600;
 }

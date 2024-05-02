@@ -9,11 +9,11 @@
 }
 
 .wrapper a {
-  color: var(--color-primary-100);
+  color: var(--color-text-primary);
 }
 
 .wrapper a:hover {
-  color: var(--color-secondary-100);
+  color: var(--color-secondary-200);
 }
 
 .postsList {

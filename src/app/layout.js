@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       style={theme === "light" ? LIGHT_TOKENS : DARK_TOKENS}
     >
       <body className={poppins.className}>
-        <Header />
+        <Header theme={theme} />
         <main>{children}</main>
         <Footer />
       </body>

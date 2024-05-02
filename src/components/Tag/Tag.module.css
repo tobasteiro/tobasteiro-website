@@ -1,6 +1,6 @@
 .tag {
   display: inline-block;
-  color: #333;
+  color: var(--color-text-primary);
   font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -10,7 +10,7 @@
 
 .default {
   padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
+  background-color: var(--color-secondary-200);
   padding: 5px;
   border-radius: 5px;
 }
@@ -21,7 +21,7 @@
 
 .ghost {
   background-color: transparent;
-  color: var(--color-secondary-100);
+  color: var(--color-secondary-200);
 }
 
 .ghost:hover {

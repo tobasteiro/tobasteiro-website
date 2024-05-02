@@ -8,11 +8,14 @@ export async function POST(request: NextRequest) {
   const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET;
 
   try {
-    const { data } = await fetch(
+    const data = await fetch(
       `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET}&response=${captchaValue}`,
-      {}
+      {
+        method: "POST",
+      }
     ).then((res) => res.json());
 
+    console.log({ data });
     if (data.success) {
       return NextResponse.json({
         success: data.success,

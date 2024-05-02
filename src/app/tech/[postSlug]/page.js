@@ -10,7 +10,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 
 import styles from "./postSlug.module.css";
 import CodeSnippet from "@/components/CodeSnippet";
-import Tag from "@/components/Tag";
 import TechSidebar from "@/components/TechSidebar";
 
 const DivisionGroupsDemo = dynamic(() =>

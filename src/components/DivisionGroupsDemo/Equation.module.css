@@ -9,5 +9,5 @@
   color: var(--color-gray-500);
 }
 .remainderDigit {
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }

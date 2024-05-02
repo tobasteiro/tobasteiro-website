@@ -31,9 +31,10 @@ function HomePage() {
 
       <section className={styles.section_homequote}>
         <p>
-          What I like the most about technology is that I get to work on
-          different industries, learn from a variety of professional profiles
-          from all around the world and talk in a single universal language.
+          One aspect of technology that particularly appeals to me is its
+          capacity to immerse me in diverse industries, providing opportunities
+          to glean insights from professionals of various backgrounds spanning
+          the globe{" "}
         </p>
       </section>
 

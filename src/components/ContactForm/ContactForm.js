@@ -38,7 +38,7 @@ function ContactForm() {
     }
     setSubmitted(true);
 
-    const res = await fetch("/api/verify", {
+    const res = await fetch("/api/verify-captcha", {
       method: "POST",
       body: JSON.stringify({ captchaValue }),
       headers: {
@@ -62,7 +62,7 @@ function ContactForm() {
           createToast("error", err);
         });
     } else {
-      createToast("error", "Internal Server Error");
+      createToast("error", "Captcha verification failed");
     }
   };
 

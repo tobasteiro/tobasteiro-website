@@ -2,7 +2,7 @@
   --handle-width: 12px;
   --handle-height: 24px;
   --track-color: var(--color-gray-500);
-  --handle-color: var(--color-text);
+  --handle-color: var(--color-text-primary);
   --handle-active-color: var(--color-primary);
   --background-color: var(--color-card-background);
   display: block;

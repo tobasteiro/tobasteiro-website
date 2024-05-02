@@ -1,13 +1,21 @@
 "use client";
 
 import React from "react";
+import { Mitr } from "next/font/google";
+
 import styles from "./ResponsiveNav.module.css";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
-function ResponsiveNav({ children }) {
+const mitr = Mitr({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mitr",
+  weight: ["200", "300", "400", "500", "600"],
+});
+
+function ResponsiveNav({ theme, children }) {
   const [open, setOpen] = React.useState(false);
   const isMobile = useMediaQuery({ maxWidth: "768px" });
 
@@ -34,13 +42,8 @@ function ResponsiveNav({ children }) {
         </div>
       </div>
 
-      <Link href="/">
-        <Image
-          src="/assets/TOBasteiro.png"
-          alt="Tobias Basteiro"
-          width={100}
-          height={15}
-        />
+      <Link href="/" className={styles.logo}>
+        <p className={mitr.className}>TOBasteiro</p>
       </Link>
       <div
         className={open && isMobile ? styles.responsiveMenus : styles.menus}

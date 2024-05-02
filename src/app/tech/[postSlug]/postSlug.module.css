@@ -20,14 +20,28 @@
   width: 100%;
 }
 
+.page a {
+  font-weight: 500;
+  color: var(--color-terciary-100);
+}
+
+.page a:hover {
+  color: var(--color-terciary-200);
+}
+
+.page strong {
+  font-weight: 600;
+}
+
 .page > p,
 .page > ul {
   font-size: 1.125rem;
   padding-bottom: 1.5rem;
+  color: var(--color-text);
 }
 
 .page h2 {
-  color: var(--color-text);
+  color: var(--color-secondary-300);
   font-size: 2rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;

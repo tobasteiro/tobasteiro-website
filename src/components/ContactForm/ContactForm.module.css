@@ -3,6 +3,7 @@
 }
 
 .form_group label {
+  color: var(--color-text-primary);
   display: block;
   margin-bottom: 5px;
 }

@@ -1,3 +1,9 @@
+.logo {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
 .hamburger {
   width: 2rem;
   height: 2rem;
