@@ -29,7 +29,7 @@ function Footer() {
             <SocialIcon
               target="_blank"
               style={{ height: 40, width: 40 }}
-              url="https://www.linkedin.com/in/tobias-osmar-basteiro"
+              url="https://www.linkedin.com/in/tobias-basteiro"
             />
           </li>
           <li>

@@ -25,11 +25,6 @@ function MusicPlayer() {
     };
   }, [isPlaying]);
 
-  // return (
-  //   <button className={styles.action}>
-  //     <Play size="1.5rem" />
-  //   </button>
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.media_player}>

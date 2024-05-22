@@ -24,7 +24,7 @@ function NavItems() {
           Tech Stuff
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link
           className={
             currentPath.startsWith("/offscreen") ? styles.fontsemibold : ""
@@ -33,7 +33,7 @@ function NavItems() {
         >
           Off Screen
         </Link>
-      </li>
+      </li> */}
       <li>
         <Link
           className={
