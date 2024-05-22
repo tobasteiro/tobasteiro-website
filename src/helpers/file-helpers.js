@@ -33,9 +33,9 @@ export async function loadBlogPost(slug) {
 }
 
 function readFile(localPath) {
-  return fs.readFile(path.join(process.cwd(), localPath), "utf8");
+  return fs.readFile(path.join(process.cwd(), "public", localPath), "utf8");
 }
 
 function readDirectory(localPath) {
-  return fs.readdir(path.join(process.cwd(), localPath));
+  return fs.readdir(path.join(process.cwd(), "public", localPath));
 }
