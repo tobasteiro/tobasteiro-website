@@ -4,8 +4,8 @@ import styles from "./techpage.module.css";
 import BlogSummaryCard from "@/components/BlogSummaryCard";
 import TechSidebar from "@/components/TechSidebar";
 
-async function TechStuff({ tag }) {
-  const blogPosts = await getBlogPostList(tag);
+async function TechStuff() {
+  const blogPosts = await getBlogPostList(null);
 
   return (
     <div className={styles.wrapper}>

@@ -26,7 +26,7 @@ const PlayCanvasYinYang = dynamic(() =>
   import("@/components/PlayCanvasYinYang")
 );
 
-export const getBlogPostData = React.cache(async (slug) => {
+const getBlogPostData = React.cache(async (slug) => {
   try {
     return await loadBlogPost(slug);
   } catch (error) {
