@@ -50,7 +50,7 @@
   left: 0;
   position: fixed;
   top: 6rem;
-  background-color: white;
+  background-color: var(--color-background-secondary);
   width: 50%;
   padding-top: 2rem;
   padding-bottom: 2rem;
