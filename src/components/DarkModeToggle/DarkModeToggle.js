@@ -40,7 +40,7 @@ function DarkModeToggle({ initialTheme = "light" }) {
   return (
     <>
       <button className={styles.action} onClick={toggleDarkMode}>
-        {theme === "dark" ? <Sun size="1.5rem" /> : <Moon size="1.5rem" />}
+        {theme === "dark" ? <Moon size="1.5rem" /> : <Sun size="1.5rem" />}
         <VisuallyHidden>Toggle dark / light mode</VisuallyHidden>
       </button>
     </>
