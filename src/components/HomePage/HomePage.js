@@ -2,6 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 
+import profilePicture from "/public/assets/tobias-profile.png";
+
 import styles from "./HomePage.module.css";
 import AdjustContainer from "../AdjustContainer";
 
@@ -12,7 +14,7 @@ function HomePage() {
         <div className={styles.profile_image}>
           <Image
             className={styles.profile_image}
-            src="/assets/tobias-profile.png"
+            src={profilePicture}
             alt="Tobias Basteiro"
             width={250}
             height={250}
@@ -21,7 +23,6 @@ function HomePage() {
 
         <div className={styles.about_text}>
           <h1>Hi! I’m Tobias.</h1>
-          {/* [Time since Ago 1 2010] */}
           <p>
             I’ve been working on Software projects for 13+ years. I love
             learning, sharing and building great things for real people.

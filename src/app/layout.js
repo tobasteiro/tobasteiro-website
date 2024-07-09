@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "TOBasteiro - Tech & More",
+  title: "Tobias Basteiro - Tech & More",
   description: "Tobias Basteiro's personal blog",
 };
 
